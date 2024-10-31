@@ -112,9 +112,10 @@ func main() {
 		pool.AddTask(fmt.Sprintf("Task %d", i))
 	}
 
-	time.Sleep(1 * time.Second)
-	pool.AddWorker()
+	time.Sleep(10 * time.Second)
 
+	pool.AddWorker()
+	time.Sleep(1 * time.Second)
 	for i := 1; i <= 20; i++ {
 		pool.AddTask(fmt.Sprintf("Task %d", i))
 	}
